@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>D2 Good Ideas' | Mice War</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <!-- Le styles -->
+	<link href="../Bootstrap/assets/css/scroll.css" rel="stylesheet">
+    <link href="../Bootstrap/assets/css/bootstrap.css" rel="stylesheet">
+    <style>
+      body {
+        padding-top: 60px; /* 60px to make the container go all the way to the bottom of the topbar */
+      }
+    </style>
+    <link href="../Bootstrap/assets/css/bootstrap-responsive.css" rel="stylesheet">
+
+    <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
+    <!--[if lt IE 9]>
+      <script src="../assets/js/html5shiv.js"></script>
+    <![endif]-->
+
+    <!-- Fav and touch icons -->
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="../Bootstrap/assets/ico/apple-touch-icon-144-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="../Bootstrap/assets/ico/apple-touch-icon-114-precomposed.png">
+      <link rel="apple-touch-icon-precomposed" sizes="72x72" href="../Bootstrap/assets/ico/apple-touch-icon-72-precomposed.png">
+                    <link rel="apple-touch-icon-precomposed" href="../Bootstrap/assets/ico/apple-touch-icon-57-precomposed.png">
+                                   <link rel="shortcut icon" href="../Bootstrap/assets/ico/favicon.png">
+  </head>
+
+  <body>
+
+    <div class="navbar navbar-inverse navbar-fixed-top">
+      <div class="navbar-inner">
+        <div class="container">
+          <button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="brand" class="active" href="#">D2 | Good ideas'</a>
+          <div class="nav-collapse collapse">
+            <ul class="nav">
+           <li class=><a href="#">Inicio</a></li>
+              <li><a href="#about">Acerca de...</a></li>
+              <li class="dropdown">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Contacto <b class="caret"></b></a>
+                <ul class="dropdown-menu">
+				<li class="nav-header">Redes sociales</li>
+                  <li><a href="#">Twitter</a></li>
+				  <li><a href="#">Youtube</a></li>
+                  <li><a href="#">Steam</a></li>
+                  <li><a href="#">E-Mail</a></li>
+                  <li class="divider"></li>
+                  <li class="nav-header">Juegos</li>
+                  <li><a href="#">Minecraft</a></li>
+            </ul>
+          </div><!--/.nav-collapse -->
+        </div>
+      </div>
+    </div>
+	
+	<div class="container">
+		<div class="hero-unit">
+		<!-------Nether Portal Calculator--------->
+			<div>
+			        
+        <h3><font color="green">Mundo Normal</font> a <font color="red">Nether</font></h3>
+        <form name="OtoN">
+            <table border="4" { width: 20px; }>
+                <tbody><tr { width: 20px; }>
+                    <th colspan="3">Cordenadas Mundo Normal</th>
+                    <th></th>
+                    <th colspan="3">Cordenadas del Nether</th>
+                </tr>
+                <tr { width: 20px; }>
+                    <th width="50">X</th>
+                    <th width="50">Y</th>
+                    <th width="50">Z</th>
+                    <th width="25"></th>
+                    <th width="50">X</th>
+                    <th width="50">Y</th>
+                    <th width="50">Z</th>
+                </tr>
+                <tr { width: 20px; }>
+                    <td { width: 20px; }><input type="text" name="SrcX" size="5" value="0" style="text-align: center;" onkeypress="return isNumberKey(event)" onkeyup="CalcOtoN()" onfocus="this.select()"></td>
+                    <td { width: 20px; }><input type="text" name="SrcY" size="5" value="0" style="text-align: center;" onkeypress="return isNumberKey(event)" onkeyup="CalcOtoN()" onfocus="this.select()"></td>
+                    <td { width: 20px; }><input type="text" name="SrcZ" size="5" value="0" style="text-align: center;" onkeypress="return isNumberKey(event)" onkeyup="CalcOtoN()" onfocus="this.select()"></td>
+                    <td { width: 20px; }><center><b>--&gt;</b></center></td>
+                    <td { width: 20px; }><input type="text" name="DstX" size="5" value="0" style="text-align: center; background-color: silver;" onkeypress="return isNumberKey(event)" onkeyup="CalcOtoN()" onfocus="this.select()"></td>
+                    <td { width: 20px; }><input type="text" name="DstY" size="5" value="0" style="text-align: center; background-color: silver;" onkeypress="return isNumberKey(event)" onkeyup="CalcOtoN()" onfocus="this.select()"></td>
+                    <td { width: 20px; }><input type="text" name="DstZ" size="5" value="0" style="text-align: center; background-color: silver;" onkeypress="return isNumberKey(event)" onkeyup="CalcOtoN()" onfocus="this.select()"></td>
+                </tr>
+                <tr { width: 20px; }>
+                    <td { width: 20px; } colspan="7"><input type="button" name="OtoN_Reset" value="Reset" style="width: 100%;" onclick="ClearOtoN()"></td>
+            </tr></tbody></table>
+            <script type="text/javascript">
+                <!--
+                function CalcOtoN()
+                {
+                    var sx, sy, sz;
+
+                    sx = parseInt(document.OtoN.SrcX.value);
+                    sy = parseInt(document.OtoN.SrcY.value);
+                    sz = parseInt(document.OtoN.SrcZ.value);
+
+                    if ((sy > 123) || (sy < 1))
+                        document.OtoN.SrcY.style.background = "#FF8080";
+                    else
+                        document.OtoN.SrcY.style.background = "#FFFFFF";
+
+                    document.OtoN.DstX.value = Math.floor(sx / 8);
+                    document.OtoN.DstY.value = sy;
+                    document.OtoN.DstZ.value = Math.floor(sz / 8);
+                }
+
+                function ClearOtoN()
+                {
+                    document.OtoN.SrcX.value = "0";
+                    document.OtoN.SrcY.value = "0";
+                    document.OtoN.SrcZ.value = "0";
+                    document.OtoN.DstX.value = "0";
+                    document.OtoN.DstY.value = "0";
+                    document.OtoN.DstZ.value = "0";
+                    document.OtoN.SrcY.style.background = "#FFFFFF";
+                }
+
+                function isNumberKey(e)
+                {
+                    var chr = (e.which) ? e.which : e.keyCode
+                    if ( (chr <= 57) || (chr == 189) )
+                        return true;
+                    return false;
+                }
+                //-->
+            </script>
+        </form>
+        <hr>
+        <h3><font color="red">Nether</font> a <font color="green">Mundo normal</font></h3>
+        <form name="NtoO">
+            <table border="4">
+                <tbody><tr>
+                    <th colspan="3">Cordenadas del Nether</th>
+                    <th></th>
+                    <th colspan="3">Cordenadas del mundo normal</th>
+                </tr>
+                <tr>
+                    <th width="50">X</th>
+                    <th width="50">Y</th>
+                    <th width="50">Z</th>
+                    <th width="25"></th>
+                    <th width="50">X</th>
+                    <th width="50">Y</th>
+                    <th width="50">Z</th>
+                </tr>
+                <tr>
+                    <td><input type="text" name="SrcX" size="5" value="0" style="text-align: center;" onkeypress="return isNumberKey(event)" onkeyup="CalcNtoO()" onfocus="this.select()"></td>
+                    <td><input type="text" name="SrcY" size="5" value="0" style="text-align: center;" onkeypress="return isNumberKey(event)" onkeyup="CalcNtoO()" onfocus="this.select()"></td>
+                    <td><input type="text" name="SrcZ" size="5" value="0" style="text-align: center;" onkeypress="return isNumberKey(event)" onkeyup="CalcNtoO()" onfocus="this.select()"></td>
+                    <td><center><b>--&gt;</b></center></td>
+                    <td><input type="text" name="DstX" size="5" value="0" style="text-align: center; background-color: silver;" onkeypress="return isNumberKey(event)" onkeyup="CalcNtoO()" onfocus="this.select()"></td>
+                    <td><input type="text" name="DstY" size="5" value="0" style="text-align: center; background-color: silver;" onkeypress="return isNumberKey(event)" onkeyup="CalcNtoO()" onfocus="this.select()"></td>
+                    <td><input type="text" name="DstZ" size="5" value="0" style="text-align: center; background-color: silver;" onkeypress="return isNumberKey(event)" onkeyup="CalcNtoO()" onfocus="this.select()"></td>
+                </tr>
+                <tr>
+                    <td colspan="7"><input type="button" name="NtoO_Reset" value="Reset" style="width: 100%;" onclick="ClearNtoO()"></td>
+            </tr></tbody></table>
+            <script type="text/javascript">
+                <!--
+                function CalcNtoO()
+                {
+                    var sx, sy, sz;
+
+                    sx = parseInt(document.NtoO.SrcX.value);
+                    sy = parseInt(document.NtoO.SrcY.value);
+                    sz = parseInt(document.NtoO.SrcZ.value);
+
+                    if ((sy > 123) || (sy < 1))
+                        document.NtoO.SrcY.style.background = "#FF8080";
+                    else
+                        document.NtoO.SrcY.style.background = "#FFFFFF";
+
+                    document.NtoO.DstX.value = (sx * 8);
+                    document.NtoO.DstY.value = sy;
+                    document.NtoO.DstZ.value = (sz * 8);
+                }
+
+                function ClearNtoO()
+                {
+                    document.NtoO.SrcX.value = "0";
+                    document.NtoO.SrcY.value = "0";
+                    document.NtoO.SrcZ.value = "0";
+                    document.NtoO.DstX.value = "0";
+                    document.NtoO.DstY.value = "0";
+                    document.NtoO.DstZ.value = "0";
+                    document.NtoO.SrcY.style.background = "#FFFFFF";
+                }
+
+                function isNumberKey(e)
+                {
+                    var chr = (e.which) ? e.which : e.keyCode
+                    if ( (chr <= 57) || (chr == 189) )
+                        return true;
+                    return false;
+                }
+                //-->
+            </script>
+        </form>
+			</div>
+		<!-------Nether Portal Calculator--------->
+		</div>
+		<div class="modal hide fade">
+
+		
+		
+  </div>
+  		
+</div>
+	
+		<footer>
+			<p>&copy; D2 | Good ideas' 2013</p>
+		</footer>
+	</div>
+
+    <!-- Le javascript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="../Bootstrap/assets/js/jquery.js"></script>
+    <script src="../Bootstrap/assets/js/bootstrap-transition.js"></script>
+    <script src="../Bootstrap/assets/js/bootstrap-alert.js"></script>
+    <script src="../Bootstrap/assets/js/bootstrap-modal.js"></script>
+    <script src="../Bootstrap/assets/js/bootstrap-dropdown.js"></script>
+    <script src="../Bootstrap/assets/js/bootstrap-scrollspy.js"></script>
+    <script src="../Bootstrap/assets/js/bootstrap-tab.js"></script>
+    <script src="../Bootstrap/assets/js/bootstrap-tooltip.js"></script>
+    <script src="../Bootstrap/assets/js/bootstrap-popover.js"></script>
+    <script src="../Bootstrap/assets/js/bootstrap-button.js"></script>
+    <script src="../Bootstrap/assets/js/bootstrap-collapse.js"></script>
+    <script src="../Bootstrap/assets/js/bootstrap-carousel.js"></script>
+    <script src="../Bootstrap/assets/js/bootstrap-typeahead.js"></script>
+
+  </body>
+</html>
