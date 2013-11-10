@@ -1,0 +1,146 @@
+		<!-------Nether Portal Calculator--------->
+			<div>
+			        
+        <h3><font color="green">Mundo Normal</font> a <font color="red">Nether</font></h3>
+        <form name="OtoN">
+            <table border="4">
+                <tbody><tr>
+                    <th colspan="3">Cordenadas Mundo Normal</th>
+                    <th></th>
+                    <th colspan="3">Cordenadas del Nether</th>
+                </tr>
+                <tr>
+                    <th width="50">X</th>
+                    <th width="50">Y</th>
+                    <th width="50">Z</th>
+                    <th width="25"></th>
+                    <th width="50">X</th>
+                    <th width="50">Y</th>
+                    <th width="50">Z</th>
+                </tr>
+                <tr>
+                    <td><input type="text" name="SrcX" size="5" value="0" style="text-align: center;" onkeypress="return isNumberKey(event)" onkeyup="CalcOtoN()" onfocus="this.select()"></td>
+                    <td><input type="text" name="SrcY" size="5" value="0" style="text-align: center;" onkeypress="return isNumberKey(event)" onkeyup="CalcOtoN()" onfocus="this.select()"></td>
+                    <td><input type="text" name="SrcZ" size="5" value="0" style="text-align: center;" onkeypress="return isNumberKey(event)" onkeyup="CalcOtoN()" onfocus="this.select()"></td>
+                    <td><center><b>--&gt;</b></center></td>
+                    <td><input type="text" name="DstX" size="5" value="0" style="text-align: center; background-color: silver;" onkeypress="return isNumberKey(event)" onkeyup="CalcOtoN()" onfocus="this.select()"></td>
+                    <td><input type="text" name="DstY" size="5" value="0" style="text-align: center; background-color: silver;" onkeypress="return isNumberKey(event)" onkeyup="CalcOtoN()" onfocus="this.select()"></td>
+                    <td><input type="text" name="DstZ" size="5" value="0" style="text-align: center; background-color: silver;" onkeypress="return isNumberKey(event)" onkeyup="CalcOtoN()" onfocus="this.select()"></td>
+                </tr>
+                <tr>
+                    <td colspan="7"><input type="button" name="OtoN_Reset" value="Reset" style="width: 100%;" onclick="ClearOtoN()"></td>
+            </tr></tbody></table>
+            <script type="text/javascript">
+                <!--
+                function CalcOtoN()
+                {
+                    var sx, sy, sz;
+
+                    sx = parseInt(document.OtoN.SrcX.value);
+                    sy = parseInt(document.OtoN.SrcY.value);
+                    sz = parseInt(document.OtoN.SrcZ.value);
+
+                    if ((sy > 123) || (sy < 1))
+                        document.OtoN.SrcY.style.background = "#FF8080";
+                    else
+                        document.OtoN.SrcY.style.background = "#FFFFFF";
+
+                    document.OtoN.DstX.value = Math.floor(sx / 8);
+                    document.OtoN.DstY.value = sy;
+                    document.OtoN.DstZ.value = Math.floor(sz / 8);
+                }
+
+                function ClearOtoN()
+                {
+                    document.OtoN.SrcX.value = "0";
+                    document.OtoN.SrcY.value = "0";
+                    document.OtoN.SrcZ.value = "0";
+                    document.OtoN.DstX.value = "0";
+                    document.OtoN.DstY.value = "0";
+                    document.OtoN.DstZ.value = "0";
+                    document.OtoN.SrcY.style.background = "#FFFFFF";
+                }
+
+                function isNumberKey(e)
+                {
+                    var chr = (e.which) ? e.which : e.keyCode
+                    if ( (chr <= 57) || (chr == 189) )
+                        return true;
+                    return false;
+                }
+                //-->
+            </script>
+        </form>
+
+        <h3><font color="red">Nether</font> a <font color="green">Mundo normal</font></h3>
+        <form name="NtoO">
+            <table border="4">
+                <tbody><tr>
+                    <th colspan="3">Cordenadas del Nether</th>
+                    <th></th>
+                    <th colspan="3">Cordenadas del mundo normal</th>
+                </tr>
+                <tr>
+                    <th width="50">X</th>
+                    <th width="50">Y</th>
+                    <th width="50">Z</th>
+                    <th width="25"></th>
+                    <th width="50">X</th>
+                    <th width="50">Y</th>
+                    <th width="50">Z</th>
+                </tr>
+                <tr>
+                    <td><input type="text" name="SrcX" size="5" value="0" style="text-align: center;" onkeypress="return isNumberKey(event)" onkeyup="CalcNtoO()" onfocus="this.select()"></td>
+                    <td><input type="text" name="SrcY" size="5" value="0" style="text-align: center;" onkeypress="return isNumberKey(event)" onkeyup="CalcNtoO()" onfocus="this.select()"></td>
+                    <td><input type="text" name="SrcZ" size="5" value="0" style="text-align: center;" onkeypress="return isNumberKey(event)" onkeyup="CalcNtoO()" onfocus="this.select()"></td>
+                    <td><center><b>--&gt;</b></center></td>
+                    <td><input type="text" name="DstX" size="5" value="0" style="text-align: center; background-color: silver;" onkeypress="return isNumberKey(event)" onkeyup="CalcNtoO()" onfocus="this.select()"></td>
+                    <td><input type="text" name="DstY" size="5" value="0" style="text-align: center; background-color: silver;" onkeypress="return isNumberKey(event)" onkeyup="CalcNtoO()" onfocus="this.select()"></td>
+                    <td><input type="text" name="DstZ" size="5" value="0" style="text-align: center; background-color: silver;" onkeypress="return isNumberKey(event)" onkeyup="CalcNtoO()" onfocus="this.select()"></td>
+                </tr>
+                <tr>
+                    <td colspan="7"><input type="button" name="NtoO_Reset" value="Reset" style="width: 100%;" onclick="ClearNtoO()"></td>
+            </tr></tbody></table>
+            <script type="text/javascript">
+                <!--
+                function CalcNtoO()
+                {
+                    var sx, sy, sz;
+
+                    sx = parseInt(document.NtoO.SrcX.value);
+                    sy = parseInt(document.NtoO.SrcY.value);
+                    sz = parseInt(document.NtoO.SrcZ.value);
+
+                    if ((sy > 123) || (sy < 1))
+                        document.NtoO.SrcY.style.background = "#FF8080";
+                    else
+                        document.NtoO.SrcY.style.background = "#FFFFFF";
+
+                    document.NtoO.DstX.value = (sx * 8);
+                    document.NtoO.DstY.value = sy;
+                    document.NtoO.DstZ.value = (sz * 8);
+                }
+
+                function ClearNtoO()
+                {
+                    document.NtoO.SrcX.value = "0";
+                    document.NtoO.SrcY.value = "0";
+                    document.NtoO.SrcZ.value = "0";
+                    document.NtoO.DstX.value = "0";
+                    document.NtoO.DstY.value = "0";
+                    document.NtoO.DstZ.value = "0";
+                    document.NtoO.SrcY.style.background = "#FFFFFF";
+                }
+
+                function isNumberKey(e)
+                {
+                    var chr = (e.which) ? e.which : e.keyCode
+                    if ( (chr <= 57) || (chr == 189) )
+                        return true;
+                    return false;
+                }
+                //-->
+            </script>
+        </form>
+			</div>
+		<!-------Nether Portal Calculator--------->
